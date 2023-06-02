@@ -14,7 +14,6 @@ namespace WEB_API_ASP.Controllers
         {
             return set.Contains(value.ToLower());
         }
-
         [HttpPost]
         [Route("drawcanvas")]
         public IActionResult PostCanvas(IFormFile image, [FromForm] string txtAnnotationsString)
@@ -27,11 +26,9 @@ namespace WEB_API_ASP.Controllers
                 {
                     jsonStringAllWords = sr.ReadToEnd();
                 }
-
                 StringComparer stringComparer = StringComparer.OrdinalIgnoreCase;
                 HashSet<string> hashSetNormal = JsonConvert.DeserializeObject<HashSet<string>>(jsonStringAllWords);
                 HashSet<string> lowerCaseSet = new HashSet<string>(hashSetNormal, StringComparer.OrdinalIgnoreCase);
-
                 List<TextAnnotationGoogleVision> textAnnotations = JsonConvert.DeserializeObject<List<TextAnnotationGoogleVision>>(txtAnnotationsString);
                 if (image != null && image.Length > 0 && textAnnotations != null)
                 {
@@ -39,7 +36,6 @@ namespace WEB_API_ASP.Controllers
                     {
                         image.CopyTo(memoryStream);
                         byte[] imageData = memoryStream.ToArray();
-
                         using (var imageStream = new MemoryStream(imageData))
                         using (var originalImage = Image.FromStream(imageStream))
                         using (var graphics = Graphics.FromImage(originalImage))
@@ -62,11 +58,9 @@ namespace WEB_API_ASP.Controllers
                                 graphics.DrawRectangle(pen, rectangle);
                                 pen.Dispose();
                             }
-
                             var resultStream = new MemoryStream();
                             originalImage.Save(resultStream, ImageFormat.Jpeg);
                             resultStream.Position = 0;
-
                             return new FileStreamResult(resultStream, "image/jpeg");
                         }
                     }
