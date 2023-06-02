@@ -20,7 +20,7 @@ namespace WEB_API_ASP.Controllers
         {
             try
             {
-                string allWordsJson = ".\\files\\AllWordsPtBr.json";
+                string allWordsJson = "./files/AllWordsPtBr.json";
                 string jsonStringAllWords;
                 using (StreamReader sr = new StreamReader(allWordsJson))
                 {
