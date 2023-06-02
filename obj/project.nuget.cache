@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vXiU2th+Sv4VjSJ8oZs+hqTfDgD0dM58RGF0QfePDSYNl4AxMioflT1CDZofIEdbMvOj1a8Eb0HdWsryYy489g==",
+  "dgSpecHash": "IqCq97Ih6mZLzU09bP566k7kL9pPna0Tf01r3EuCSmSpMU/ou1JNsjvM03bL8KMS1E6YNZBiGVCWg8owFqXD7w==",
   "success": true,
-  "projectFilePath": "C:\\Cursos\\WebService_CSharp\\WEB_API_ASP\\web_api_asp\\WEB_API_ASP.csproj",
+  "projectFilePath": "C:\\Cursos\\WebService_CSharp\\WEB_API_ASP\\WEB_API_ASP\\WEB_API_ASP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\isaque.oliveira.ARTVAC\\.nuget\\packages\\app.metrics.abstractions\\4.3.0\\app.metrics.abstractions.4.3.0.nupkg.sha512",
     "C:\\Users\\isaque.oliveira.ARTVAC\\.nuget\\packages\\app.metrics.formatters.json\\4.3.0\\app.metrics.formatters.json.4.3.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Cursos\\WebService_CSharp\\WEB_API_ASP\\web_api_asp\\WEB_API_ASP.csproj": {}
+    "C:\\Cursos\\WebService_CSharp\\WEB_API_ASP\\WEB_API_ASP\\WEB_API_ASP.csproj": {}
   },
   "projects": {
-    "C:\\Cursos\\WebService_CSharp\\WEB_API_ASP\\web_api_asp\\WEB_API_ASP.csproj": {
+    "C:\\Cursos\\WebService_CSharp\\WEB_API_ASP\\WEB_API_ASP\\WEB_API_ASP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Cursos\\WebService_CSharp\\WEB_API_ASP\\web_api_asp\\WEB_API_ASP.csproj",
+        "projectUniqueName": "C:\\Cursos\\WebService_CSharp\\WEB_API_ASP\\WEB_API_ASP\\WEB_API_ASP.csproj",
         "projectName": "WEB_API_ASP",
-        "projectPath": "C:\\Cursos\\WebService_CSharp\\WEB_API_ASP\\web_api_asp\\WEB_API_ASP.csproj",
+        "projectPath": "C:\\Cursos\\WebService_CSharp\\WEB_API_ASP\\WEB_API_ASP\\WEB_API_ASP.csproj",
         "packagesPath": "C:\\Users\\isaque.oliveira.ARTVAC\\.nuget\\packages\\",
-        "outputPath": "C:\\Cursos\\WebService_CSharp\\WEB_API_ASP\\web_api_asp\\obj\\",
+        "outputPath": "C:\\Cursos\\WebService_CSharp\\WEB_API_ASP\\WEB_API_ASP\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
