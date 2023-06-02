@@ -1,8 +1,7 @@
-using System.Drawing.Imaging;
-using System.Drawing;
 using Microsoft.AspNetCore.Mvc;
 using WEB_API_ASP.Resources;
 using Newtonsoft.Json;
+using SkiaSharp;
 
 namespace WEB_API_ASP.Controllers
 {
@@ -36,11 +35,12 @@ namespace WEB_API_ASP.Controllers
                     {
                         image.CopyTo(memoryStream);
                         byte[] imageData = memoryStream.ToArray();
-                        using (var imageStream = new MemoryStream(imageData))
-                        using (var originalImage = Image.FromStream(imageStream))
-                        using (var graphics = Graphics.FromImage(originalImage))
+                        using (var originalImage = SKBitmap.Decode(imageData))
+                        using (var surface = SKSurface.Create(new SKImageInfo(originalImage.Width, originalImage.Height)))
+                        using (var canvas = surface.Canvas)
                         {
-                            Pen pen;
+                            canvas.DrawBitmap(originalImage, 0, 0);
+                            SKPaint paint = new SKPaint { Style = SKPaintStyle.Stroke, Color = SKColors.Green, StrokeWidth = 2 };
                             foreach (var annotation in textAnnotations)
                             {
                                 var vertices = annotation.boundingPoly.vertices;
@@ -50,18 +50,22 @@ namespace WEB_API_ASP.Controllers
                                 var top = yValues.Min();
                                 var right = xValues.Max();
                                 var bottom = yValues.Max();
-                                var rectangle = new Rectangle(left, top, right - left, bottom - top);
+                                var rect = SKRect.Create(left, top, right - left, bottom - top);
                                 if (FindWord(lowerCaseSet, annotation.description))
-                                    pen = new Pen(Color.Green, 2);
+                                    paint.Color = SKColors.Green;
                                 else
-                                    pen = new Pen(Color.Red, 2);
-                                graphics.DrawRectangle(pen, rectangle);
-                                pen.Dispose();
+                                    paint.Color = SKColors.Red;
+                                canvas.DrawRect(rect, paint);
                             }
-                            var resultStream = new MemoryStream();
-                            originalImage.Save(resultStream, ImageFormat.Jpeg);
-                            resultStream.Position = 0;
-                            return new FileStreamResult(resultStream, "image/jpeg");
+                            using (var resultImage = surface.Snapshot())
+                            using (var resultStream = new MemoryStream())
+                            {
+                                resultImage.Encode(SKEncodedImageFormat.Jpeg, 100).SaveTo(resultStream);
+                                resultStream.Position = 0;
+                                var memoryResultStream = new MemoryStream(resultStream.ToArray());
+                                memoryResultStream.Seek(0, SeekOrigin.Begin);
+                                return new FileStreamResult(memoryResultStream, "image/jpeg");
+                            }
                         }
                     }
                 }
