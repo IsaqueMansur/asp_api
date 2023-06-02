@@ -997,6 +997,7 @@
       "App.Metrics.Formatters.Json >= 4.3.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.5",
       "Newtonsoft.Json >= 13.0.3",
+      "SkiaSharp >= 2.88.3",
       "SkiaSharp.NativeAssets.Linux >= 2.88.3",
       "Swashbuckle.AspNetCore >= 6.5.0",
       "System.Drawing.Common >= 7.0.0"
@@ -1057,6 +1058,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.3, )"
+          },
+          "SkiaSharp": {
+            "target": "Package",
+            "version": "[2.88.3, )"
           },
           "SkiaSharp.NativeAssets.Linux": {
             "target": "Package",

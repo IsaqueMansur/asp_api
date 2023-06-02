@@ -40,3 +40,12 @@ C:\Cursos\WebService_CSharp\WEB_API_ASP\WEB_API_ASP\bin\Debug\net7.0\App.Metrics
 C:\Cursos\WebService_CSharp\WEB_API_ASP\WEB_API_ASP\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Cursos\WebService_CSharp\WEB_API_ASP\WEB_API_ASP\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Cursos\WebService_CSharp\WEB_API_ASP\WEB_API_ASP\bin\Debug\net7.0\files\AllWordsPtBr.json
+C:\Cursos\WebService_CSharp\WEB_API_ASP\WEB_API_ASP\bin\Debug\net7.0\SkiaSharp.dll
+C:\Cursos\WebService_CSharp\WEB_API_ASP\WEB_API_ASP\bin\Debug\net7.0\runtimes\linux-arm\native\libSkiaSharp.so
+C:\Cursos\WebService_CSharp\WEB_API_ASP\WEB_API_ASP\bin\Debug\net7.0\runtimes\linux-arm64\native\libSkiaSharp.so
+C:\Cursos\WebService_CSharp\WEB_API_ASP\WEB_API_ASP\bin\Debug\net7.0\runtimes\linux-musl-x64\native\libSkiaSharp.so
+C:\Cursos\WebService_CSharp\WEB_API_ASP\WEB_API_ASP\bin\Debug\net7.0\runtimes\linux-x64\native\libSkiaSharp.so
+C:\Cursos\WebService_CSharp\WEB_API_ASP\WEB_API_ASP\bin\Debug\net7.0\runtimes\osx\native\libSkiaSharp.dylib
+C:\Cursos\WebService_CSharp\WEB_API_ASP\WEB_API_ASP\bin\Debug\net7.0\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Cursos\WebService_CSharp\WEB_API_ASP\WEB_API_ASP\bin\Debug\net7.0\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Cursos\WebService_CSharp\WEB_API_ASP\WEB_API_ASP\bin\Debug\net7.0\runtimes\win-x86\native\libSkiaSharp.dll
