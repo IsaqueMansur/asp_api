@@ -31,3 +31,11 @@ C:\Cursos\WebService_CSharp\WEB_API_ASP\WEB_API_ASP\obj\Release\net7.0\refint\WE
 C:\Cursos\WebService_CSharp\WEB_API_ASP\WEB_API_ASP\obj\Release\net7.0\WEB_API_ASP.pdb
 C:\Cursos\WebService_CSharp\WEB_API_ASP\WEB_API_ASP\obj\Release\net7.0\WEB_API_ASP.genruntimeconfig.cache
 C:\Cursos\WebService_CSharp\WEB_API_ASP\WEB_API_ASP\obj\Release\net7.0\ref\WEB_API_ASP.dll
+C:\Cursos\WebService_CSharp\WEB_API_ASP\WEB_API_ASP\bin\Release\net7.0\App.Metrics.Abstractions.dll
+C:\Cursos\WebService_CSharp\WEB_API_ASP\WEB_API_ASP\bin\Release\net7.0\App.Metrics.Formatters.Json.dll
+C:\Cursos\WebService_CSharp\WEB_API_ASP\WEB_API_ASP\bin\Release\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Cursos\WebService_CSharp\WEB_API_ASP\WEB_API_ASP\bin\Release\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Cursos\WebService_CSharp\WEB_API_ASP\WEB_API_ASP\bin\Release\net7.0\Newtonsoft.Json.dll
+C:\Cursos\WebService_CSharp\WEB_API_ASP\WEB_API_ASP\bin\Release\net7.0\System.Drawing.Common.dll
+C:\Cursos\WebService_CSharp\WEB_API_ASP\WEB_API_ASP\bin\Release\net7.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Cursos\WebService_CSharp\WEB_API_ASP\WEB_API_ASP\bin\Release\net7.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
