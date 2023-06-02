@@ -141,6 +141,36 @@
           }
         }
       },
+      "SkiaSharp.NativeAssets.Linux/2.88.3": {
+        "type": "package",
+        "dependencies": {
+          "SkiaSharp": "2.88.3"
+        },
+        "compile": {
+          "lib/net5.0/_._": {}
+        },
+        "runtime": {
+          "lib/net5.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux-arm/native/libSkiaSharp.so": {
+            "assetType": "native",
+            "rid": "linux-arm"
+          },
+          "runtimes/linux-arm64/native/libSkiaSharp.so": {
+            "assetType": "native",
+            "rid": "linux-arm64"
+          },
+          "runtimes/linux-musl-x64/native/libSkiaSharp.so": {
+            "assetType": "native",
+            "rid": "linux-musl-x64"
+          },
+          "runtimes/linux-x64/native/libSkiaSharp.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          }
+        }
+      },
       "SkiaSharp.NativeAssets.macOS/2.88.3": {
         "type": "package",
         "compile": {
@@ -741,6 +771,29 @@
         "skiasharp.nuspec"
       ]
     },
+    "SkiaSharp.NativeAssets.Linux/2.88.3": {
+      "sha512": "wz29evZVWRqN7WHfenFwQIgqtr8f5vHCutcl1XuhWrHTRZeaIBk7ngjhyHpjUMcQxtIEAdq34ZRvMQshsBYjqg==",
+      "type": "package",
+      "path": "skiasharp.nativeassets.linux/2.88.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/net462/SkiaSharp.NativeAssets.Linux.targets",
+        "buildTransitive/net462/SkiaSharp.NativeAssets.Linux.targets",
+        "lib/net462/_._",
+        "lib/net5.0/_._",
+        "lib/netcoreapp3.1/_._",
+        "lib/netstandard1.3/_._",
+        "runtimes/linux-arm/native/libSkiaSharp.so",
+        "runtimes/linux-arm64/native/libSkiaSharp.so",
+        "runtimes/linux-musl-x64/native/libSkiaSharp.so",
+        "runtimes/linux-x64/native/libSkiaSharp.so",
+        "skiasharp.nativeassets.linux.2.88.3.nupkg.sha512",
+        "skiasharp.nativeassets.linux.nuspec"
+      ]
+    },
     "SkiaSharp.NativeAssets.macOS/2.88.3": {
       "sha512": "CEbWAXMGFkPV3S1snBKK7jEG3+xud/9kmSAhu0BEUKKtlMdxx+Qal0U9bntQREM9QpqP5xLWZooodi8IlV8MEg==",
       "type": "package",
@@ -944,7 +997,7 @@
       "App.Metrics.Formatters.Json >= 4.3.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.5",
       "Newtonsoft.Json >= 13.0.3",
-      "SkiaSharp >= 2.88.3",
+      "SkiaSharp.NativeAssets.Linux >= 2.88.3",
       "Swashbuckle.AspNetCore >= 6.5.0",
       "System.Drawing.Common >= 7.0.0"
     ]
@@ -1005,7 +1058,7 @@
             "target": "Package",
             "version": "[13.0.3, )"
           },
-          "SkiaSharp": {
+          "SkiaSharp.NativeAssets.Linux": {
             "target": "Package",
             "version": "[2.88.3, )"
           },

@@ -56,7 +56,7 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
-            "SkiaSharp": {
+            "SkiaSharp.NativeAssets.Linux": {
               "target": "Package",
               "version": "[2.88.3, )"
             },

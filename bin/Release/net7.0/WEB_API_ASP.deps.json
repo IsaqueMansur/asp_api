@@ -11,7 +11,7 @@
           "App.Metrics.Formatters.Json": "4.3.0",
           "Microsoft.AspNetCore.OpenApi": "7.0.5",
           "Newtonsoft.Json": "13.0.3",
-          "SkiaSharp": "2.88.3",
+          "SkiaSharp.NativeAssets.Linux": "2.88.3",
           "Swashbuckle.AspNetCore": "6.5.0",
           "System.Drawing.Common": "7.0.0"
         },
@@ -103,6 +103,33 @@
           "lib/net6.0/SkiaSharp.dll": {
             "assemblyVersion": "2.88.0.0",
             "fileVersion": "2.88.3.0"
+          }
+        }
+      },
+      "SkiaSharp.NativeAssets.Linux/2.88.3": {
+        "dependencies": {
+          "SkiaSharp": "2.88.3"
+        },
+        "runtimeTargets": {
+          "runtimes/linux-arm/native/libSkiaSharp.so": {
+            "rid": "linux-arm",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-arm64/native/libSkiaSharp.so": {
+            "rid": "linux-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-musl-x64/native/libSkiaSharp.so": {
+            "rid": "linux-musl-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/libSkiaSharp.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -262,6 +289,13 @@
       "sha512": "sha512-GG8X3EdfwyBfwjl639UIiOVOKEdeoqDgYrz0P1MUCnefXt9cofN+AK8YB/v1+5cLMr03ieWCQdDmPqnFIzSxZw==",
       "path": "skiasharp/2.88.3",
       "hashPath": "skiasharp.2.88.3.nupkg.sha512"
+    },
+    "SkiaSharp.NativeAssets.Linux/2.88.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wz29evZVWRqN7WHfenFwQIgqtr8f5vHCutcl1XuhWrHTRZeaIBk7ngjhyHpjUMcQxtIEAdq34ZRvMQshsBYjqg==",
+      "path": "skiasharp.nativeassets.linux/2.88.3",
+      "hashPath": "skiasharp.nativeassets.linux.2.88.3.nupkg.sha512"
     },
     "SkiaSharp.NativeAssets.macOS/2.88.3": {
       "type": "package",
