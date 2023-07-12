@@ -71,7 +71,7 @@ namespace WEB_API_ASP.Controllers
                 }
                 else
                 {
-                    return BadRequest("Nenhum arquivo de imagem ou anotações de texto foram enviados.");
+                    return BadRequest("Nenhum arquivo de imagem ou anotações de texto foi enviado.");
                 }
             }
             catch (Exception ex)
