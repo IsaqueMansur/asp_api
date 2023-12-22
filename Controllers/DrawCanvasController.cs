@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using WEB_API_ASP.Resources;
 using Newtonsoft.Json;
 using SkiaSharp;
+using System;
 
 namespace WEB_API_ASP.Controllers
 {
@@ -15,11 +16,16 @@ namespace WEB_API_ASP.Controllers
         }
         [HttpPost]
         [Route("drawcanvas")]
-        public IActionResult PostCanvas(IFormFile image, [FromForm] string txtAnnotationsString)
+        public IActionResult PostCanvas(
+            IFormFile image, 
+            [FromForm] string txtAnnotationsString, 
+            [FromForm] string colorConfig,
+            [FromForm] string mode
+            )
         {
             try
             {
-                string allWordsJson = "~/files/AllWordsPtBr.json\"";
+                string allWordsJson = "./files/AllWordsPtBr.json";
                 string jsonStringAllWords;
                 using (StreamReader sr = new StreamReader(allWordsJson))
                 {
@@ -51,11 +57,36 @@ namespace WEB_API_ASP.Controllers
                                 var right = xValues.Max();
                                 var bottom = yValues.Max();
                                 var rect = SKRect.Create(left, top, right - left, bottom - top);
+                                var wordExists = FindWord(lowerCaseSet, annotation.description);
                                 if (FindWord(lowerCaseSet, annotation.description))
-                                    paint.Color = SKColors.Green;
+                                    if(colorConfig == "1")
+                                    {
+                                        paint.Color = SKColors.Green;
+                                    }
+                                    else
+                                    {
+                                        paint.Color = SKColors.Blue;
+                                    }
                                 else
-                                    paint.Color = SKColors.Red;
-                                canvas.DrawRect(rect, paint);
+                                {
+                                    if (colorConfig == "1")
+                                    {
+                                        paint.Color = SKColors.Red;
+                                    }
+                                    else
+                                    {
+                                        paint.Color = SKColors.Yellow;
+                                    }
+                                }
+                                if (FindWord(lowerCaseSet, annotation.description) && mode == "all")
+                                {
+                                    canvas.DrawRect(rect, paint);
+                                }
+                                if (!FindWord(lowerCaseSet, annotation.description))
+                                {
+                                    canvas.DrawRect(rect, paint);
+                                }                            
+                                
                             }
                             using (var resultImage = surface.Snapshot())
                             using (var resultStream = new MemoryStream())
