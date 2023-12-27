@@ -1,27 +1,38 @@
 {
   "version": 2,
-  "dgSpecHash": "YVy4SdgoRBps3noKAbv+zVE8TskWM+iCHMoDR0PFuvi0tOzHtw8juy1L/N5q9xIsuYypiNFSyIW0F2N+5rPb9w==",
+  "dgSpecHash": "qNdIrj6fDbvmsnm4pbj/KQ4Xl/PBZ0WnHS8uXz8DptIrCoCYEdp4oWiYe0wCqLIPtrfb+VE3W+olhyTgQiBc/w==",
   "success": true,
-  "projectFilePath": "C:\\repositories\\PORTAL_ARTVAC\\WEB_API_ASP\\WEB_API_ASP.csproj",
+  "projectFilePath": "F:\\repositories\\PORTAL_ARTVAC\\WEB_API_ASP\\WEB_API_ASP.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\isaque.oliveira.ARTVAC\\.nuget\\packages\\app.metrics.abstractions\\4.3.0\\app.metrics.abstractions.4.3.0.nupkg.sha512",
-    "C:\\Users\\isaque.oliveira.ARTVAC\\.nuget\\packages\\app.metrics.formatters.json\\4.3.0\\app.metrics.formatters.json.4.3.0.nupkg.sha512",
-    "C:\\Users\\isaque.oliveira.ARTVAC\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.5\\microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
-    "C:\\Users\\isaque.oliveira.ARTVAC\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.0.0\\microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512",
-    "C:\\Users\\isaque.oliveira.ARTVAC\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
-    "C:\\Users\\isaque.oliveira.ARTVAC\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
-    "C:\\Users\\isaque.oliveira.ARTVAC\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
-    "C:\\Users\\isaque.oliveira.ARTVAC\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
-    "C:\\Users\\isaque.oliveira.ARTVAC\\.nuget\\packages\\skiasharp\\2.88.3\\skiasharp.2.88.3.nupkg.sha512",
-    "C:\\Users\\isaque.oliveira.ARTVAC\\.nuget\\packages\\skiasharp.nativeassets.linux\\2.88.3\\skiasharp.nativeassets.linux.2.88.3.nupkg.sha512",
-    "C:\\Users\\isaque.oliveira.ARTVAC\\.nuget\\packages\\skiasharp.nativeassets.macos\\2.88.3\\skiasharp.nativeassets.macos.2.88.3.nupkg.sha512",
-    "C:\\Users\\isaque.oliveira.ARTVAC\\.nuget\\packages\\skiasharp.nativeassets.win32\\2.88.3\\skiasharp.nativeassets.win32.2.88.3.nupkg.sha512",
-    "C:\\Users\\isaque.oliveira.ARTVAC\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
-    "C:\\Users\\isaque.oliveira.ARTVAC\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
-    "C:\\Users\\isaque.oliveira.ARTVAC\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
-    "C:\\Users\\isaque.oliveira.ARTVAC\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
-    "C:\\Users\\isaque.oliveira.ARTVAC\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
-    "C:\\Users\\isaque.oliveira.ARTVAC\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
+    "C:\\Users\\isaque.oliveira\\.nuget\\packages\\app.metrics.abstractions\\4.3.0\\app.metrics.abstractions.4.3.0.nupkg.sha512",
+    "C:\\Users\\isaque.oliveira\\.nuget\\packages\\app.metrics.formatters.json\\4.3.0\\app.metrics.formatters.json.4.3.0.nupkg.sha512",
+    "C:\\Users\\isaque.oliveira\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.5\\microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
+    "C:\\Users\\isaque.oliveira\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.0.0\\microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512",
+    "C:\\Users\\isaque.oliveira\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\isaque.oliveira\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\isaque.oliveira\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\isaque.oliveira\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\isaque.oliveira\\.nuget\\packages\\skiasharp\\2.88.3\\skiasharp.2.88.3.nupkg.sha512",
+    "C:\\Users\\isaque.oliveira\\.nuget\\packages\\skiasharp.nativeassets.linux\\2.88.3\\skiasharp.nativeassets.linux.2.88.3.nupkg.sha512",
+    "C:\\Users\\isaque.oliveira\\.nuget\\packages\\skiasharp.nativeassets.macos\\2.88.3\\skiasharp.nativeassets.macos.2.88.3.nupkg.sha512",
+    "C:\\Users\\isaque.oliveira\\.nuget\\packages\\skiasharp.nativeassets.win32\\2.88.3\\skiasharp.nativeassets.win32.2.88.3.nupkg.sha512",
+    "C:\\Users\\isaque.oliveira\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\isaque.oliveira\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\isaque.oliveira\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\isaque.oliveira\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
+    "C:\\Users\\isaque.oliveira\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
+    "C:\\Users\\isaque.oliveira\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'SkiaSharp' 2.88.3 has a known high severity vulnerability, https://github.com/advisories/GHSA-j7hp-h8jx-5ppr",
+      "libraryId": "SkiaSharp",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

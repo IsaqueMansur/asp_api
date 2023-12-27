@@ -10,17 +10,19 @@ namespace WEB_API_ASP.Controllers
     [Route("[controller]")]
     public class CanvasController : ControllerBase
     {
-        public static bool FindWord(HashSet<string> set, string value)
+        private static bool FindWord(HashSet<string> set, string value)
         {
             return set.Contains(value.ToLower());
         }
+
         [HttpPost]
         [Route("drawcanvas")]
         public IActionResult PostCanvas(
             IFormFile image, 
             [FromForm] string txtAnnotationsString, 
             [FromForm] string colorConfig,
-            [FromForm] string mode
+            [FromForm] string mode,
+            [FromForm] int lineEspessure
             )
         {
             try
@@ -46,36 +48,51 @@ namespace WEB_API_ASP.Controllers
                         using (var canvas = surface.Canvas)
                         {
                             canvas.DrawBitmap(originalImage, 0, 0);
-                            SKPaint paint = new SKPaint { Style = SKPaintStyle.Stroke, Color = SKColors.Green, StrokeWidth = 2 };
+                            SKPaint paint = new SKPaint { Style = SKPaintStyle.Stroke, Color = SKColors.Green, StrokeWidth = lineEspessure };
                             foreach (var annotation in textAnnotations)
                             {
                                 var vertices = annotation.boundingPoly.vertices;
                                 var xValues = vertices.Select(v => v.X);
                                 var yValues = vertices.Select(v => v.Y);
-                                var left = xValues.Min();
-                                var top = yValues.Min();
-                                var right = xValues.Max();
-                                var bottom = yValues.Max();
+                                var left = xValues.Min() - 1;
+                                var top = yValues.Min() - 1;
+                                var right = xValues.Max() + 1;
+                                var bottom = yValues.Max() + 1;
                                 var rect = SKRect.Create(left, top, right - left, bottom - top);
                                 var wordExists = FindWord(lowerCaseSet, annotation.description);
                                 if (FindWord(lowerCaseSet, annotation.description))
-                                    if(colorConfig == "1")
+                                {
+                                    switch (colorConfig)
                                     {
-                                        paint.Color = SKColors.Green;
+                                        case "1":
+                                            paint.Color = SKColors.Green;
+                                            break;
+                                        case "2":
+                                            paint.Color = SKColors.Blue;
+                                            break;
+                                        case "3":
+                                            paint.Color = SKColors.DarkViolet;
+                                            break;
+                                        default:
+                                            paint.Color = SKColors.Green;
+                                            break;
                                     }
-                                    else
-                                    {
-                                        paint.Color = SKColors.Blue;
-                                    }
+                                }
                                 else
                                 {
-                                    if (colorConfig == "1")
+                                    switch (colorConfig)
                                     {
-                                        paint.Color = SKColors.Red;
-                                    }
-                                    else
-                                    {
-                                        paint.Color = SKColors.Yellow;
+                                        case "1":
+                                            paint.Color = SKColors.Red;
+                                            break;
+                                        case "2":
+                                            paint.Color = SKColors.Yellow;
+                                            break;
+                                        case "3":
+                                            paint.Color = SKColors.DarkOrange;
+                                            break;
+                                        default: paint.Color = SKColors.Red;
+                                            break;
                                     }
                                 }
                                 if (FindWord(lowerCaseSet, annotation.description) && mode == "all")
