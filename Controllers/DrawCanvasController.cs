@@ -10,6 +10,38 @@ namespace WEB_API_ASP.Controllers
     [Route("[controller]")]
     public class CanvasController : ControllerBase
     {
+        public static IFormFile ConvertFromBase64(string base64String, string fileName)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(base64String))
+                {
+                    throw new ArgumentException("A string base64 está vazia ou nula.");
+                }
+                var base64Parts = base64String.Split(',');
+                var base64Data = base64Parts.Length > 1 ? base64Parts[1] : base64Parts[0];
+
+                byte[] bytes = Convert.FromBase64String(base64Data);
+
+                using (MemoryStream ms = new MemoryStream(bytes))
+                {
+                    byte[] copiedBytes = new byte[ms.Length];
+                    ms.Read(copiedBytes, 0, (int)ms.Length); 
+                    IFormFile file = new FormFile(new MemoryStream(copiedBytes), 0, copiedBytes.Length, "image", fileName);
+                    return file;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao converter para bytes: " + ex.Message);
+                throw;
+            }
+        }
+
+
+
+
+
         private static bool FindWord(HashSet<string> set, string value)
         {
             return set.Contains(value.ToLower());
@@ -18,7 +50,7 @@ namespace WEB_API_ASP.Controllers
         [HttpPost]
         [Route("drawcanvas")]
         public IActionResult PostCanvas(
-            IFormFile image, 
+            [FromForm] string imageBase64,
             [FromForm] string txtAnnotationsString, 
             [FromForm] string colorConfig,
             [FromForm] string mode,
@@ -27,6 +59,7 @@ namespace WEB_API_ASP.Controllers
         {
             try
             {
+                IFormFile image = ConvertFromBase64(imageBase64, "file_name");
                 string allWordsJson = "./files/AllWordsPtBr.json";
                 string jsonStringAllWords;
                 using (StreamReader sr = new StreamReader(allWordsJson))
