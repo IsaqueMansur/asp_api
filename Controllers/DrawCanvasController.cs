@@ -128,7 +128,7 @@ namespace WEB_API_ASP.Controllers
                                             paint.Color = SKColors.DarkOrange;
                                             break;
                                         case "4":
-                                            paint.Color = SKColors.Pink;
+                                            paint.Color = SKColors.Magenta;
                                             break;
                                         default: paint.Color = SKColors.Red;
                                             break;
